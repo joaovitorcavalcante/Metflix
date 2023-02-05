@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Metflix.Application.Common;
+using Metflix.Application.Common.Results;
 using Metflix.Domain.Entities;
 using Metflix.Infraestructure.Persistence.Managers;
 

@@ -1,6 +1,6 @@
 ﻿using Metflix.Domain.Abstractions;
 using Metflix.Domain.Common;
-using Metflix.Domain.Repositories;
+using Metflix.Infraestructure.Persistence.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

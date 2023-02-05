@@ -1,16 +1,16 @@
 ﻿using Metflix.Domain.Abstractions;
 
-namespace Metflix.Application.Common
+namespace Metflix.Application.Common.Results
 {
-    public class CommandResult<TEntity> where TEntity : EntityBase
+    public class CommandResult<TEntity> where TEntity : class
     {
         public TEntity Data { get; set; }
         public bool Status { get; set; }
         public string Message { get; set; }
 
         public CommandResult(
-            TEntity data, 
-            bool status = true, 
+            TEntity data,
+            bool status = true,
             string message = "Operação efetuada com sucesso!")
         {
             Status = status;

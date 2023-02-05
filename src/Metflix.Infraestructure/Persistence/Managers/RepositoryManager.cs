@@ -1,7 +1,6 @@
-﻿using Metflix.Domain.Abstractions;
-using Metflix.Domain.Entities;
-using Metflix.Domain.Repositories;
+﻿using Metflix.Domain.Repositories;
 using Metflix.Infraestructure.Persistence.Repositories;
+using Metflix.Infraestructure.Persistence.Repositories.Interfaces;
 
 namespace Metflix.Infraestructure.Persistence.Managers
 {
@@ -10,7 +9,10 @@ namespace Metflix.Infraestructure.Persistence.Managers
         private readonly MetflixDbContext _context;
 
         private Lazy<ICategoryRepository> _categoryRepository;
+        private Lazy<IUserRepository> _userRepository;
+
         public ICategoryRepository Category => _categoryRepository.Value;
+        public IUserRepository User => _userRepository.Value;
 
         public RepositoryManager(
             MetflixDbContext context,
@@ -19,7 +21,10 @@ namespace Metflix.Infraestructure.Persistence.Managers
             _context = context;
  
             _categoryRepository = new Lazy<ICategoryRepository>(
-                () => new CategoryRepository(repositoryBase)); 
+                () => new CategoryRepository(repositoryBase));
+
+            _userRepository = new Lazy<IUserRepository>(
+                () => new UserRepository(repositoryBase));
         }
 
         public async Task CommitAsync()

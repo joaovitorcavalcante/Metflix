@@ -6,8 +6,9 @@ namespace Metflix.Infraestructure.Persistence
 {
     public class MetflixDbContext : DbContext
     {
-        public DbSet<Movie> Movies { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public MetflixDbContext(DbContextOptions<MetflixDbContext> options)
             : base(options)

@@ -1,8 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
-using Metflix.Application.Categories.Commands.CreateCategory;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Metflix.Application

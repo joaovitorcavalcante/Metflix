@@ -1,6 +1,6 @@
 ﻿using Metflix.Domain.Abstractions;
 
-namespace Metflix.Application.Common
+namespace Metflix.Application.Common.Results
 {
     public class QueryResult<TEntity> where TEntity : EntityBase
     {

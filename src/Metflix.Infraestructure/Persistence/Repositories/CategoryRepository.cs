@@ -1,7 +1,7 @@
-﻿using Metflix.Domain.Abstractions;
-using Metflix.Domain.Common;
+﻿using Metflix.Domain.Common;
 using Metflix.Domain.Entities;
 using Metflix.Domain.Repositories;
+using Metflix.Infraestructure.Persistence.Repositories.Interfaces;
 using System.Linq.Expressions;
 
 namespace Metflix.Infraestructure.Persistence.Repositories

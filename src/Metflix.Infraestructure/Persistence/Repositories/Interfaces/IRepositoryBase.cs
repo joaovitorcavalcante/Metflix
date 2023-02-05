@@ -2,7 +2,7 @@
 using Metflix.Domain.Common;
 using System.Linq.Expressions;
 
-namespace Metflix.Domain.Repositories
+namespace Metflix.Infraestructure.Persistence.Repositories.Interfaces
 {
     public interface IRepositoryBase
     {
